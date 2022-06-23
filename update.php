@@ -145,7 +145,7 @@
       $sn++;
       header("location:welcome.php?q=quiz&step=2&eid=$eid&n=$sn&t=$total")or die('Error152');
     }
-    else if( $_SESSION['key']!='suryapinky')
+    else if( $_SESSION['key']!='admin')
     {
       $q=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error156');
       while($row=mysqli_fetch_array($q) )
